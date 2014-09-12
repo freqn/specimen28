@@ -1,0 +1,8 @@
+<div class="container">
+  <h1>Species</h1>
+  <ul>
+    <% @species.each do |specimen|%>
+      <li><%= specimen.name.capitalize %></li>
+    <% end %>
+  </ul>
+</div>
