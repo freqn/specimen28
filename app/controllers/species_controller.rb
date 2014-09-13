@@ -9,6 +9,11 @@ class SpeciesController < ApplicationController
     render 'species/new'
   end
 
+  def show
+    @species = Species.find(params[:id])
+    render 'species/show'
+  end
+
   def create
     @species = Species.create(name: params[:name])
     if @species.save
