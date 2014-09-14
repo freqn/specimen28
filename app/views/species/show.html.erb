@@ -1,4 +1,16 @@
 <h1>Viewing <%= @species.name.capitalize %></h1>
-
 <p>Species name: <%= @species.name %></p>
+
+<ul>
+  <h3>Sightings</h3>
+  <% @species.sightings.each do |sighting| %>
+    <li><%= sighting.date %> <%= link_to "Details", "/species/#{@species.id}/sightings/#{sighting.id}"%></li>
+
+
+  <% end %>
+</ul>
+
+
+<a href="/species/<%= @species.id %>/sightings/new">Add sighting</a>
+
 <p><%= link_to 'Back to species', "/species" %></p>

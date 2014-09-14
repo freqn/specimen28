@@ -2,7 +2,7 @@
   <h1>Species</h1>
   <ul>
     <% @species.each do |specimen|%>
-      <li><%= link_to specimen.name.capitalize, "/species/#{specimen.id}" %> <%= link_to 'Edit', "/species/#{specimen.id}/edit"%> <%= link_to 'Delete', "/species/#{specimen.id}", method: :delete%></li>
+      <li><%= link_to specimen.name.capitalize, "/species/#{specimen.id}" %> <%= link_to 'Edit', "/species/#{specimen.id}/edit"%> <%= link_to 'Delete', "/species/#{specimen.id}", method: :delete %></li>
     <% end %>
   </ul>
   <p><%= link_to 'New', "/species/new" %></p>

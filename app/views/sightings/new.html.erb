@@ -1,0 +1,13 @@
+<h1>New sighting for <%= @species.name %></h1>
+
+<form action="/species/<%= @sighting.species_id%>/sightings" method="post">
+  <div><label for="date">Date</label>
+  <input id="date" name="date" type="text" value="<%= @sighting.date%>"></div>
+  <div><label for="date">Lat</label>
+  <input id="latitude" name="latitude" type="text" value="<%= @sighting.latitude%>"></div>
+  <div><label for="date">Lon</label>
+  <input id="longitude" name="longitude" type="text" value="<%= @sighting.longitude%>"></div>
+  <div><label for="Notes">Notes</label>
+  <input id="notes" name="notes" type="text" placeholder="optional" value="<%= @sighting.notes%>"></div>
+  <button>Add</button>
+</form>

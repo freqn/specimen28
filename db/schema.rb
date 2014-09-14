@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 20140913184938) do
 
   create_table "sightings", force: true do |t|
     t.string   "latitude"
-    t.string   "longitute"
+    t.string   "longitude"
     t.string   "date"
     t.string   "notes"
     t.integer  "species_id"

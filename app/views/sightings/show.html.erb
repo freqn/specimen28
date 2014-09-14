@@ -1,0 +1,11 @@
+<h1><%= @sighting.date %> sighting</h1>
+
+<ul>
+    <li>Latitude: <%= @sighting.latitude %></li>
+    <li>Longitude: <%= @sighting.longitude %></li>
+    <li>Notes: <%= @sighting.notes%></li>
+</ul>
+<p><%= link_to "Edit", "/species/#{@species.id}/sightings/#{@sighting.id}/edit" %></p>
+<p><%= link_to "Delete", "/species/#{@species.id}/sightings/#{@sighting.id}", method: :delete %></p>
+<p><%= link_to "Return to #{@species.name}", "/species/#{@species.id}" %></p>
+<p><%= link_to "Home", "/species/" %></p>
